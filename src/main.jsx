@@ -17,7 +17,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route index element={<Home />} />
+        <Route path="/vite-deploy" element={<Home />} />
         <Route path="*" element={<Page404 />} />
         <Route path="/product" element={<Product />} />
         <Route path="/about-us" element={<About />} />
