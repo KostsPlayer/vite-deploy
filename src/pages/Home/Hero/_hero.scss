@@ -1,0 +1,70 @@
+@use "./../../../assets/mixin" as m;
+
+.hero {
+  height: 34rem;
+  width: 100%;
+  position: relative;
+
+  &-title {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    z-index: 5;
+    text-align: center;
+    width: fit-content;
+    line-height: 6.4rem;
+    // border: 0.1rem solid aqua;
+
+    &-text {
+      @include m.flex($direction: column);
+      color: #fff;
+      text-transform: uppercase;
+      overflow: hidden;
+
+      &-0 {
+        font-family: "Noto Serif", serif;
+        font-size: 8rem;
+        font-weight: 700;
+      }
+
+      &-1 {
+        font-family: "Bodoni Moda", serif;
+        font-weight: 300;
+        font-size: 4rem;
+      }
+    }
+  }
+
+  .hero-animation {
+    @mixin hero-animation($top: 0, $right: 0) {
+      @include m.flex();
+      position: relative;
+      top: $top;
+      right: $right;
+      width: 105rem;
+      rotate: -45deg;
+      // border: 0.1rem solid #fff;
+
+      .hero-animation-image {
+        width: 15rem;
+        height: 15rem;
+        object-fit: cover;
+        filter: grayscale(1) brightness(50%);
+        // border: 0.1rem solid #fff;
+      }
+    }
+
+    &-0 {
+      @include hero-animation($right: 25.4rem, $top: -2rem);
+    }
+
+    &-1 {
+      @include hero-animation($right: 9.2rem, $top: -12rem);
+    }
+
+    &-2 {
+      @include hero-animation($right: -7rem, $top: -22rem);
+    }
+  }
+}
