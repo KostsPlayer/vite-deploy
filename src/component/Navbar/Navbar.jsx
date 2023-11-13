@@ -10,7 +10,7 @@ export default function Navbar() {
     <>
       <nav className="nav-nav" ref={navbar}>
         <Link
-          to="/"
+          to="/vite-deploy"
           className="nav-logo"
           onMouseEnter={onEnterNavbar}
           onMouseLeave={onLeaveNavbar}
@@ -25,7 +25,7 @@ export default function Navbar() {
             onMouseLeave={onLeaveNavbar}
             ref={(e) => e && magnets.current.push(e)}
           >
-            <Link className="nav-link" to="/">
+            <Link className="nav-link" to="/vite-deploy">
               Home
             </Link>
           </li>
